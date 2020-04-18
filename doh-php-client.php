@@ -216,7 +216,7 @@ function doh_read_dnsanswer($raw, $requesttype)
                 }
                 else
                 {
-                    $results['ipv6'][] = $result_ip;
+                    $results['ipv6'][] = inet_ntop(substr( $raw, $raw_counter , $iplength ));
                 }
                 $i++;
             }
